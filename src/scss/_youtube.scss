@@ -1,0 +1,26 @@
+.youtube__title {
+  color: $primary;
+  font-size: 36px;
+  margin: 30px 0;
+}
+
+.youtube__featured {
+  max-width: 560px;
+}
+
+.youtube__resume {
+  margin: 30px 0;
+  border: 1px solid $gray;
+  padding: 30px 20px;
+  box-shadow: 0px 3px 0px 0px $gray;
+  h3 {
+    font-size: 21px;
+    color: $primary;
+    margin-bottom: 20px;
+  }
+
+  p {
+    color: $dark_gray;
+    font-size: 14px;
+  }
+}

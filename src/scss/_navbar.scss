@@ -1,0 +1,21 @@
+.navbar {
+  background-color: $primary;
+  padding: 10px 0;
+  color: $white;
+}
+.navbar__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar__logo {
+  display: block;
+}
+
+.navbar__items {
+  display: flex;
+  li {
+    padding: 0 15px;
+  }
+}
