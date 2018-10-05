@@ -7,6 +7,7 @@ export default class YoutubeFeatured extends Component {
       <div className="youtube__featured">
         <h1 className="youtube__title">Vídeo em destaque</h1>
         <iframe
+          title={featured.videoId}
           width="560"
           height="315"
           src={`https://www.youtube.com/embed/${featured.videoId}`}

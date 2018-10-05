@@ -1,0 +1,15 @@
+[Thu Oct 04 2018 21:06:21 GMT-0300 (Hora Padrão de Buenos Aires)] Layer "VAGAS.com: a parceira estratégica ... para a sua empresa": Expected end of input but ":" found.
+[Thu Oct 04 2018 21:06:21 GMT-0300 (Hora Padrão de Buenos Aires)] Layer "VAGAS.com: atraia, encontre e ... selecione as pessoas certas": Expected end of input but ":" found.
+[Thu Oct 04 2018 21:06:21 GMT-0300 (Hora Padrão de Buenos Aires)] Layer "O Prêmio VAGAS 10+": Expected end of input but "+" found.
+[Thu Oct 04 2018 21:06:21 GMT-0300 (Hora Padrão de Buenos Aires)] Layer "VAGAS.com: um time que cresce junto ... com a empresa": Expected end of input but ":" found.
+[Thu Oct 04 2018 21:06:21 GMT-0300 (Hora Padrão de Buenos Aires)] Layer "VAGAS.com: atraia, encontre e ... selecione as pessoas certas": Expected end of input but ":" found.
+[Thu Oct 04 2018 21:06:21 GMT-0300 (Hora Padrão de Buenos Aires)] Layer "VAGAS.com: atraia, encontre e ... selecione as pessoas certas": Expected end of input but ":" found.
+[Thu Oct 04 2018 21:06:21 GMT-0300 (Hora Padrão de Buenos Aires)] Layer "VAGAS.com: atraia, encontre e ... selecione as pessoas certas": Expected end of input but ":" found.
+[Thu Oct 04 2018 21:06:21 GMT-0300 (Hora Padrão de Buenos Aires)] Layer "VAGAS.com: um time que cresce junto ... com a empresa": Expected end of input but ":" found.
+[Thu Oct 04 2018 21:06:21 GMT-0300 (Hora Padrão de Buenos Aires)] Layer "+ Vídeos": Expected Either a default asset specification or a layer asset specification but "+" found.
+[Thu Oct 04 2018 21:06:21 GMT-0300 (Hora Padrão de Buenos Aires)] Layer "VAGAS.com: um time que cresce junto com a ... ...empresa": Expected end of input but ":" found.
+[Thu Oct 04 2018 21:06:21 GMT-0300 (Hora Padrão de Buenos Aires)] Layer "O prêmio VAGAS10+": Expected end of input but "+" found.
+[Thu Oct 04 2018 21:06:21 GMT-0300 (Hora Padrão de Buenos Aires)] Layer "VAGAS.com: um time que cresce junto com a ... ...empresa": Expected end of input but ":" found.
+[Thu Oct 04 2018 21:06:21 GMT-0300 (Hora Padrão de Buenos Aires)] Layer "VAGAS.com: um time que cresce junto com a ... ...empresa": Expected end of input but ":" found.
+[Thu Oct 04 2018 21:06:21 GMT-0300 (Hora Padrão de Buenos Aires)] Layer "O prêmio VAGAS10+": Expected end of input but "+" found.
+[Thu Oct 04 2018 21:06:21 GMT-0300 (Hora Padrão de Buenos Aires)] Layer "O prêmio VAGAS10+": Expected end of input but "+" found.
