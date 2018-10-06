@@ -14,7 +14,9 @@ const DescriptionBox = ({ featured }) => {
           <div className="box__views">
             <img src={views} alt="views" />
 
-            <div className="box__info box__views--info">110.090 views</div>
+            <div className="box__info box__views--info">
+              {featured.views} views
+            </div>
           </div>
 
           <div className="box__date">

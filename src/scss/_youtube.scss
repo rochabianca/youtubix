@@ -20,6 +20,11 @@
   border-bottom: 3px solid $gray;
 }
 
+.youtube__box--fixed {
+  max-height: 486px;
+  overflow: auto;
+}
+
 .youtube__box--blur {
   &::after {
     content: "";

@@ -2142,6 +2142,11 @@ html {
   border-bottom: 3px solid #c8c8c8;
 }
 
+.youtube__box--fixed {
+  max-height: 486px;
+  overflow: auto;
+}
+
 .youtube__box--blur::after {
   content: "";
   position: absolute;
