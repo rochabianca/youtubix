@@ -1,4 +1,7 @@
 import React, { Component } from "react";
+import DescriptionBox from "./DescriptionBox";
+
+require("moment/locale/pt-br");
 
 export default class YoutubeFeatured extends Component {
   render() {
@@ -16,10 +19,7 @@ export default class YoutubeFeatured extends Component {
           allowFullScreen
         />
 
-        <div className="youtube__resume youtube__box">
-          <h3>{featured.title}</h3>
-          <p>{featured.description}</p>
-        </div>
+        <DescriptionBox featured={featured} />
       </div>
     );
   }

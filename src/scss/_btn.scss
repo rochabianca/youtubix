@@ -1,0 +1,17 @@
+.btn {
+  display: block;
+  width: 100%;
+  margin-top: 15px;
+  background: $white;
+  text-transform: uppercase;
+  padding: 10px 0;
+  border: 1px solid $gray;
+  font-size: 9px;
+  color: $dark_gray;
+  cursor: pointer;
+
+  &:hover {
+    background: $dark_gray;
+    color: $white;
+  }
+}

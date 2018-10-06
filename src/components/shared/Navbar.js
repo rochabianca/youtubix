@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import logo from "../../images/logo.png";
+import busca from "../../images/busca.png";
 export default class Navbar extends Component {
   render() {
     return (
@@ -10,7 +11,9 @@ export default class Navbar extends Component {
           </div>
           <div>
             <ul className="navbar__items">
-              <li>Search</li>
+              <li>
+                <img src={busca} alt="Buscar" />
+              </li>
               <li>Menu</li>
             </ul>
           </div>

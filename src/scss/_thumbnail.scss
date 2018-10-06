@@ -1,0 +1,31 @@
+.thumbnail {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.thumbnail__info {
+  margin-left: 5px;
+}
+
+.thumbnail__title {
+  font-size: 18px;
+  color: $primary;
+  margin-bottom: 20px;
+  display: block;
+  max-width: 150px;
+}
+
+.thumbnail__views {
+  display: flex;
+  align-items: center;
+  img {
+    flex-grow: 0;
+  }
+
+  span {
+    font-weight: bold;
+    color: $gray;
+    font-size: 14px;
+    margin-left: 5px;
+  }
+}

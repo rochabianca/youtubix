@@ -7,20 +7,9 @@ export default class Videos extends Component {
     thumbnail: []
   };
 
-  getTitleAndThumb = async video => {
-    const { snippet } = await video;
-    console.log(snippet);
-    return (
-      <Video
-        key={video.id.videoId}
-        title={snippet.title}
-        thumbnail={snippet.thumbnails.default.url}
-      />
-    );
-  };
-
   render() {
     const { videos } = this.props;
+    console.log(videos);
     return (
       <div>
         <h1 className="youtube__title">+ Vídeos</h1>
@@ -34,6 +23,7 @@ export default class Videos extends Component {
                   thumbnail={video.snippet.thumbnails.default.url}
                 />
               ))}
+          <button className="btn">Carregar Mais Vídeos...</button>
         </div>
       </div>
     );

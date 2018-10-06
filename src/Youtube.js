@@ -24,7 +24,8 @@ export default class Youtube extends Component {
       featured: {
         videoId: res.data.items[0].id.videoId,
         title: res.data.items[0].snippet.title,
-        description: res.data.items[0].snippet.description
+        description: res.data.items[0].snippet.description,
+        date: res.data.items[0].snippet.publishedAt
       }
     });
   }

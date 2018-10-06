@@ -2136,8 +2136,40 @@ html {
 
 .youtube__box {
   border: 1px solid #c8c8c8;
-  box-shadow: 0px 3px 0px 0px #c8c8c8;
   margin: 30px 0px;
+  padding: 15px;
+  position: relative;
+  border-bottom: 3px solid #c8c8c8;
+}
+
+.youtube__box--blur::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), white 90%);
+  width: 100%;
+  height: 4em;
+}
+
+.youtube__box--blur:hover::after {
+  content: "";
+  background-image: none;
+}
+
+.youtube__box__header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.youtube__box__header img {
+  margin-left: 10px;
+}
+
+.youtube__box__options {
+  display: flex;
 }
 
 .youtube__resume {
@@ -2153,6 +2185,88 @@ html {
 .youtube__resume p {
   color: #9d9d9d;
   font-size: 14px;
+}
+
+.box__info {
+  position: absolute;
+  border: 3px solid #c8c8c8;
+  border-radius: 5px;
+  padding: 15px;
+  font-size: 14px;
+  font-weight: bold;
+  top: -30px;
+  right: -50px;
+  background: #ffffff;
+  z-index: 10;
+  text-align: center;
+}
+
+.box__views .box__views--info {
+  display: none;
+  right: 10px;
+}
+
+.box__views:hover .box__views--info {
+  display: block;
+}
+
+.box__date .box__date--info {
+  display: none;
+}
+
+.box__date:hover .box__date--info {
+  display: block;
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  margin-top: 15px;
+  background: #ffffff;
+  text-transform: uppercase;
+  padding: 10px 0;
+  border: 1px solid #c8c8c8;
+  font-size: 9px;
+  color: #9d9d9d;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #9d9d9d;
+  color: #ffffff;
+}
+
+.thumbnail {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.thumbnail__info {
+  margin-left: 5px;
+}
+
+.thumbnail__title {
+  font-size: 18px;
+  color: #a8395c;
+  margin-bottom: 20px;
+  display: block;
+  max-width: 150px;
+}
+
+.thumbnail__views {
+  display: flex;
+  align-items: center;
+}
+
+.thumbnail__views img {
+  flex-grow: 0;
+}
+
+.thumbnail__views span {
+  font-weight: bold;
+  color: #c8c8c8;
+  font-size: 14px;
+  margin-left: 5px;
 }
 
 body {
