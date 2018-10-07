@@ -8,6 +8,7 @@ const getVideoViews = async videoId => {
       youtubeApi.key
     }`
   );
+
   const views = statistics.data.items[0].statistics.viewCount;
 
   return views;

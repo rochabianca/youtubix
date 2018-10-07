@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import Video from "./Video";
 import youtubeApi from "../../secrets";
+import uuid from "uuid";
 
 export default class Videos extends Component {
   state = {
@@ -21,15 +22,13 @@ export default class Videos extends Component {
   }
 
   getMore = async token => {
-    console.log("clicou");
-    const { key, channelId } = youtubeApi;
-    const { videos } = this.props;
+    const { key, uploadsId } = youtubeApi;
+    const { videos } = this.state;
     let moreVideos = [];
 
     const res = await axios.get(
-      `https://www.googleapis.com/youtube/v3/search?key=${key}&channelId=${channelId}&pageToken=${token}&part=snippet,id&order=date`
+      `https://www.googleapis.com/youtube/v3/playlistItems?playlistId=${uploadsId}&key=${key}&part=snippet&pageToken=${token}`
     );
-    console.log(res.data);
     videos.map(video => {
       moreVideos.push(video);
     });
@@ -43,9 +42,20 @@ export default class Videos extends Component {
     return this.state;
   };
 
+  static getDerivedStateFromProps(props, state) {
+    const { videos, token } = props;
+
+    if (state.token === "") {
+      return {
+        videos: videos,
+        token: token
+      };
+    }
+    return state;
+  }
+
   render() {
-    // próximo objetivo: fazer isso vir do state
-    const { videos, token } = this.props;
+    const { videos, token } = this.state;
 
     return (
       <div>
@@ -55,7 +65,7 @@ export default class Videos extends Component {
             ? null
             : videos.map(video => (
                 <Video
-                  key={video.id.videoId}
+                  key={uuid()}
                   title={video.snippet.title}
                   thumbnail={video.snippet.thumbnails.default.url}
                   videoId={video.id.videoId}
