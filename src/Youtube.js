@@ -16,13 +16,12 @@ export default class Youtube extends Component {
     };
   }
   async componentDidMount() {
-    const { key, channelId, uploadsId, maxResults } = youtubeApi;
+    const { key, channelId, maxResults } = youtubeApi;
 
     const res = await axios.get(
       `https://www.googleapis.com/youtube/v3/search?key=${key}&channelId=${channelId}&part=snippet,id&order=date&maxResults=${maxResults}&pageToken`
     );
-    console.log(res.data);
-    // const statistics = await getVideoViews(res.data.items[0].id.videoId, key);
+    const statistics = await getVideoViews(res.data.items[0].id.videoId, key);
 
     this.setState({
       videos: res.data.items,
@@ -31,8 +30,8 @@ export default class Youtube extends Component {
         videoId: res.data.items[0].id.videoId,
         title: res.data.items[0].snippet.title,
         description: res.data.items[0].snippet.description,
-        date: res.data.items[0].snippet.publishedAt
-        // views: statistics
+        date: res.data.items[0].snippet.publishedAt,
+        views: statistics
       }
     });
   }

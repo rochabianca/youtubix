@@ -25,20 +25,21 @@ export default class Videos extends Component {
     const { key, uploadsId } = youtubeApi;
     const { videos } = this.state;
     let moreVideos = [];
-
-    const res = await axios.get(
-      `https://www.googleapis.com/youtube/v3/playlistItems?playlistId=${uploadsId}&key=${key}&part=snippet&pageToken=${token}`
-    );
     videos.map(video => {
       moreVideos.push(video);
     });
+    const res = await axios.get(
+      `https://www.googleapis.com/youtube/v3/playlistItems?playlistId=${uploadsId}&key=${key}&part=snippet&pageToken=${token}`
+    );
     res.data.items.map(item => {
       moreVideos.push(item);
     });
+
     this.setState({
       videos: moreVideos,
       token: res.data.nextPageToken
     });
+
     return this.state;
   };
 

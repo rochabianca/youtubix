@@ -10,6 +10,8 @@ const reducer = (state, action) => {
       return;
     case "SEARCH":
       return;
+    case "PLAY_VIDEO":
+      return;
     default:
       return state;
   }
@@ -18,6 +20,7 @@ const reducer = (state, action) => {
 export class Provider extends Component {
   state = {
     videos: [],
+    token: "",
     dispatch: action => this.setState(state => reducer(state, action))
   };
 
