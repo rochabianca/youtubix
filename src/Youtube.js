@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import axios from "axios";
 
 import youtubeApi from "./secrets";
-import YoutubeFeatured from "./components/videos/YoutubeFeatured";
-import Videos from "./components/videos/Videos";
+import YoutubeFeatured from "./components/featured/YoutubeFeatured";
+import Videos from "./components/featured/Videos";
 import getVideoViews from "./getVideoViews";
 
 export default class Youtube extends Component {

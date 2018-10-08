@@ -2255,7 +2255,7 @@ html {
   color: #a8395c;
   margin-bottom: 20px;
   display: block;
-  max-width: 150px;
+  width: 150px;
 }
 
 .thumbnail__views {
@@ -2272,6 +2272,15 @@ html {
   color: #c8c8c8;
   font-size: 14px;
   margin-left: 5px;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.list div {
+  flex-grow: 0;
 }
 
 body {
