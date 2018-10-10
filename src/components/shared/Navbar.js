@@ -1,11 +1,15 @@
 import React, { Component } from "react";
-import axios from "axios";
 import logo from "../../images/logo.png";
 import busca from "../../images/busca.png";
 import youtubeApi from "../../secrets";
 export default class Navbar extends Component {
-  onSubmit = e => {
+  onSubmit = (e, props) => {
+    console.log("props = ", props);
+
     e.preventDefault();
+    const { history } = props;
+    const query = "dogs";
+    // props.history.push(`/search/${query}`);
     //get query and redirect to /search/query
   };
   render() {
@@ -18,7 +22,7 @@ export default class Navbar extends Component {
           <div>
             <ul className="navbar__items">
               <li>
-                <form onSubmit={this.onSubmit}>
+                <form onSubmit={this.onSubmit.bind(this, this.props)}>
                   <input type="text" />
                 </form>
                 <img src={busca} alt="Buscar" />

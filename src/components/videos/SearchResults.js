@@ -8,28 +8,39 @@ export default class SearchResults extends Component {
   state = {
     videos: []
   };
-  getQueryResults = query => {
+
+  async componentDidMount() {
+    const { videos } = await this.state;
+    this.setState({
+      videos
+    });
+  }
+
+  static getDerivedStateFromProps(props, state) {
+    const { query } = props.match.params;
     const { uploadsId, key } = youtubeApi;
     axios
       .get(
         `https://www.googleapis.com/youtube/v3/search?playlistId=${uploadsId}&q=${query}&key=${key}&part=snippet&maxResults=25`
       )
       .then(function(result) {
-        console.log(result.data);
-        return result.data;
-      });
-  };
+        console.log("result", result.data.items);
 
-  async componentDidMount() {
-    const { query } = this.props.match.params;
-    const videos = await this.getQueryResults(query);
-    this.setState({
-      videos
-    });
+        state = {
+          videos: result.data
+        };
+        return state;
+      })
+      .catch(error => {
+        console.log(error.response);
+        return null;
+      });
   }
+
   render() {
+    console.log("state: ", this.state);
     const { videos } = this.state;
-    console.log(videos);
+    console.log("videos ", videos);
     return (
       <div>
         {videos === undefined
