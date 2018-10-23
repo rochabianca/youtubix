@@ -2,6 +2,14 @@
 
 this is a little app to get all Kitten Lady's videos. It uses the youtube API V3 and is still on development :D
 
+### How to run this project
+
+download it or clone then run the following comands:
+
+> npm install
+
+> npm start
+
 ### Todos
 
 ##### Featured
