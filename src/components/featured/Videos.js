@@ -58,25 +58,27 @@ export default class Videos extends Component {
   render() {
     const { videos, token } = this.state;
 
-    return (
-      <div>
-        <h1 className="youtube__title">+ Vídeos</h1>
-        <div className="videos youtube__box youtube__box--fixed">
-          {videos === undefined
-            ? null
-            : videos.map(video => (
-                <Video
-                  key={uuid()}
-                  title={video.snippet.title}
-                  thumbnail={video.snippet.thumbnails.default.url}
-                  videoId={video.id.videoId}
-                />
-              ))}
-          <button onClick={this.getMore.bind(this, token)} className="btn">
-            Carregar Mais Vídeos...
-          </button>
+    if (videos && token) {
+      return (
+        <div>
+          <h1 className="youtube__title">+ Vídeos</h1>
+          <div className="videos youtube__box youtube__box--fixed">
+            {videos.map(video => (
+              <Video
+                key={uuid()}
+                title={video.snippet.title}
+                thumbnail={video.snippet.thumbnails.default.url}
+                videoId={video.id.videoId}
+              />
+            ))}
+            <button onClick={this.getMore.bind(this, token)} className="btn">
+              Carregar Mais Vídeos...
+            </button>
+          </div>
         </div>
-      </div>
-    );
+      );
+    } else {
+      return null;
+    }
   }
 }

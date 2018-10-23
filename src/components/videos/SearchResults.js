@@ -24,12 +24,11 @@ export default class SearchResults extends Component {
         `https://www.googleapis.com/youtube/v3/search?playlistId=${uploadsId}&q=${query}&key=${key}&part=snippet&maxResults=25`
       )
       .then(function(result) {
-        console.log("result", result.data.items);
+        // console.log("result", result.data.items);
 
-        state = {
-          videos: result.data
+        return {
+          videos: result.data.items
         };
-        return state;
       })
       .catch(error => {
         console.log(error.response);
@@ -38,22 +37,25 @@ export default class SearchResults extends Component {
   }
 
   render() {
-    console.log("state: ", this.state);
+    // console.log("state: ", this.state);
     const { videos } = this.state;
-    console.log("videos ", videos);
-    return (
-      <div>
-        {videos === undefined
-          ? null
-          : videos.map(video => (
-              <Video
-                key={uuid()}
-                title={video.snippet.title}
-                thumbnail={video.snippet.thumbnails.default.url}
-                videoId={video.id.videoId}
-              />
-            ))}
-      </div>
-    );
+    // console.log("videos ", videos);
+
+    if (videos) {
+      return (
+        <div>
+          {videos.map(video => (
+            <Video
+              key={uuid()}
+              title={video.snippet.title}
+              thumbnail={video.snippet.thumbnails.default.url}
+              videoId={video.id.videoId}
+            />
+          ))}
+        </div>
+      );
+    } else {
+      return null;
+    }
   }
 }

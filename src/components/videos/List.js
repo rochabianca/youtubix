@@ -56,26 +56,28 @@ export default class List extends Component {
   render() {
     const { videos, token } = this.state;
 
-    return (
-      <div>
-        <h1 className="youtube__title">Todos os Vídeos do Canal</h1>
-        <div className="list">
-          {videos === undefined
-            ? null
-            : videos.map(video => (
-                <div key={uuid()}>
-                  <Video
-                    title={video.snippet.title}
-                    thumbnail={video.snippet.thumbnails.default.url}
-                    videoId={video.id.videoId}
-                  />
-                </div>
-              ))}
-          <button onClick={this.getMore.bind(this, token)} className="btn">
-            Carregar Mais Vídeos...
-          </button>
+    if (videos && token) {
+      return (
+        <div>
+          <h1 className="youtube__title">Todos os Vídeos do Canal</h1>
+          <div className="list">
+            {videos.map(video => (
+              <div key={uuid()}>
+                <Video
+                  title={video.snippet.title}
+                  thumbnail={video.snippet.thumbnails.default.url}
+                  videoId={video.id.videoId}
+                />
+              </div>
+            ))}
+            <button onClick={this.getMore.bind(this, token)} className="btn">
+              Carregar Mais Vídeos...
+            </button>
+          </div>
         </div>
-      </div>
-    );
+      );
+    } else {
+      return "Loading...";
+    }
   }
 }
